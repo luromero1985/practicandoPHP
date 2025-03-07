@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj en Vivo</title>
+</head>
+<body>
+
+    <h2>Hora actual:</h2>
+    <h3 id="hora"></h3>
+
+    <script>
+        function actualizarHora() {
+            let ahora = new Date();
+            let hora = ahora.getHours();
+            let minutos = ahora.getMinutes();
+            let segundos = ahora.getSeconds();
+            document.getElementById("hora").innerText = `${hora}:${minutos}:${segundos}`;
+        }
+        setInterval(actualizarHora, 1000); // Actualiza la hora cada segundo
+    </script>
+
+</body>
+</html>

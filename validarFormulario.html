@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Formulario</title>
+</head>
+<body>
+
+    <h2>Formulario de Registro</h2>
+    <form onsubmit="return validarFormulario()">
+        Nombre: <input type="text" id="nombre"><br><br>
+        Correo: <input type="email" id="correo"><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="error" style="color: red;"></p>
+
+    <script>
+        function validarFormulario() {
+            let nombre = document.getElementById("nombre").value;
+            let correo = document.getElementById("correo").value;
+            let error = document.getElementById("error");
+
+            if (nombre === "" || correo === "") {
+                error.innerText = "⚠️ Todos los campos son obligatorios.";
+                return false; // Evita que el formulario se envíe
+            }
+            alert("✅ Formulario enviado correctamente");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+
+    <h2>Contador: <span id="contador">0</span></h2>
+    <button onclick="sumar()">➕ Sumar</button>
+    <button onclick="restar()">➖ Restar</button>
+
+    <script>
+        let numero = 0;
+        function sumar() {
+            numero++;
+            document.getElementById("contador").innerText = numero;
+        }
+        function restar() {
+            numero--;
+            document.getElementById("contador").innerText = numero;
+        }
+    </script>
+
+</body>
+</html>
